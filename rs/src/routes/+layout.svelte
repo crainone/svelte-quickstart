@@ -1,10 +1,16 @@
-<nav>
-	<a href="/">Home</a>
-	<a href="/projects">Projects</a>
-	<a href="/blog">Blog</a>
-	<a href="/contact">Contact</a>
-</nav>
+<script>
+	import NavBar from '$lib/NavBar/NavBar.svelte';
+</script>
 
-<slot></slot>
+<style>
+	div {
+		margin: 20px 40px;
+	}
+</style>
+<NavBar />
 
-<footer>v1.0.1</footer>
+<div>
+	<slot></slot>
+</div>
+
+<footer>v1.0.2</footer>

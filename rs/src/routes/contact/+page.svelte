@@ -1,6 +1,48 @@
-<h1>Contact</h1>
-<p>LinkedIn</p>
-<p>GitHub</p>
-<p>StackOverflow</p>
-<p>WisdomDaisy</p>
-<p>Email</p>
+<script>
+    import linkedin from '$lib/assets/LI-Logo.png';
+    import github from '$lib/assets/GitHub_Logo.png';
+    import stackoverflow from '$lib/assets/logo-stackoverflow.png';
+
+    const connections = [
+        {"img": linkedin, "name": "@caitlin-rainone", "href": "https://www.linkedin.com/in/caitlin-rainone/"},
+        {"img": github, "name": "@crainone", "href": "https://github.com/crainone/"},
+        {"img": stackoverflow, "name": "@caitlin-rainone", "href": "https://stackoverflow.com/users/6336035/caitlin-rainone/"},
+        {"name": "wisdomdaisy.com", "href": "http://www.wisdomdaisy.com/"},
+        {"name": "contact@rainonesoftware.com", "href": "mailto:contact@rainonesoftware.com"}
+    ]
+</script>
+
+<style>
+    .connectionitem {
+        margin: auto;
+        padding: 10px;
+        border-bottom: solid black 1px;
+        text-align: justify;
+        width: 50%;
+        max-width: 200px;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width:100%;
+        height: auto;
+    }
+    a {
+        text-decoration: none;
+        margin: auto;
+    }
+    div {
+        width: 100%;
+    }
+</style>
+
+<div>
+    {#each connections as connection}
+        <a href={connection.href}>
+            <div class="connectionitem">
+                {#if connection.img}<img src={connection.img} alt={connection.name} />{/if}
+                <p>{connection.name}</p>
+            </div>
+        </a>
+    {/each}
+</div>
