@@ -1,0 +1,15 @@
+body {
+    margin: 0px;
+}
+
+.stackable {
+    width: 100%;
+}
+.stackeditem {
+    margin: auto;
+    padding: 10px;
+    border-bottom: solid black 1px;
+    text-align: justify;
+    width: 50%;
+    max-width: 200px;
+}

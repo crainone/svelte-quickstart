@@ -12,15 +12,8 @@
     ]
 </script>
 
+
 <style>
-    .connectionitem {
-        margin: auto;
-        padding: 10px;
-        border-bottom: solid black 1px;
-        text-align: justify;
-        width: 50%;
-        max-width: 200px;
-    }
     img {
         display: block;
         margin: 0 auto;
@@ -29,17 +22,14 @@
     }
     a {
         text-decoration: none;
-        margin: auto;
-    }
-    div {
-        width: 100%;
     }
 </style>
 
-<div>
+
+<div class="stackable">
     {#each connections as connection}
         <a href={connection.href}>
-            <div class="connectionitem">
+            <div class="connectionitem stackeditem">
                 {#if connection.img}<img src={connection.img} alt={connection.name} />{/if}
                 <p>{connection.name}</p>
             </div>

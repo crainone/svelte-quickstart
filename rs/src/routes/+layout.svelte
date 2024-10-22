@@ -1,16 +1,10 @@
 <script>
 	import NavBar from '$lib/NavBar/NavBar.svelte';
+	import '../style.css';
 </script>
 
-<style>
-	div {
-		margin: 20px 40px;
-	}
-</style>
 <NavBar />
 
-<div>
-	<slot></slot>
-</div>
+<slot></slot>
 
 <footer>v1.0.2</footer>

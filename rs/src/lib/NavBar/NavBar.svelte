@@ -1,11 +1,11 @@
 <script>
- import { page } from '$app/stores';
+    import { page } from '$app/stores';
 
-    let links = [
-        {"href":"/", "title": "Home"},
-        {"href":"/projects", "title": "Projects"},
-        {"href":"/blog", "title": "Blog"},
-        {"href":"/contact", "title": "Contact"}
+    const links = [
+        {"href":"", "title": "Home"},
+        {"href":"projects", "title": "Projects"},
+        {"href":"blog", "title": "Blog"},
+        {"href":"contact", "title": "Contact"}
     ]
 
 </script>
@@ -28,9 +28,11 @@
         text-align: center;
         display: block;
         padding: 14px 16px;
+        border-bottom: solid 10px rgb(172,32,40);
     }
     li a:hover {
         background-color: rgb(131, 25, 30);
+        border-bottom: solid 10px rgb(131,25,30);
     }
     li {
         float: left;
@@ -46,7 +48,7 @@
 <nav>
     <ul>
     {#each links as link}
-        <li><a href={link.href} class:active={$page.url.pathname == link.href}>{link.title}</a></li>
+        <li><a href=/{link.href} class:active={$page.url.pathname.split('/')[1] == link.href}>{link.title}</a></li>
     {/each}
     </ul>
 </nav>
